@@ -1,0 +1,292 @@
+@font-face {
+    font-family: myFont;
+    src: url(../font/prstartk.ttf);
+}
+
+:root {
+    --red: #ff0401;
+    --yellow: #ffd300;
+    --lightYellow: #f9ed3f;
+    --blue: #01f8f8;
+    --pink: #ff60b0;
+    --orange: #ffa002;
+
+}
+
+html {
+    font-size: 1.3em;
+    background-color: black;
+    color: white;
+    font-family: myFont;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+hr {
+    border: 2px solid var(--lightYellow);
+    width: 100%;
+}
+
+/* Header Nav */
+.header .nav ol {
+    padding: 0;
+    margin: 0;
+}
+
+.header .nav ol li {
+    display: inline-block;
+    padding: 2vh;
+}
+
+.header .nav ol li a {
+    text-decoration: none;
+    color: white;
+    transition: .5s all ease;
+}
+
+.header .nav ol li a:hover {
+    color: var(--yellow);
+}
+
+
+/* Main-HOME */
+#home {
+    padding-top: 5vh;
+    padding-bottom: 15vh;
+}
+
+#home .logo {
+    padding-bottom: 10vh;
+}
+
+#home .logo img {
+    transform: scale(1.5);
+}
+
+#home .pacman-home {
+    padding-bottom: 5vh;
+    animation: pacmanChased 4s infinite linear;
+}
+
+@keyframes pacmanChased {
+    0% {
+        transform: translate(70vw, 0);
+    }    
+
+    100% {
+        transform: translate(-70vw, 0);
+    }
+}
+
+#home .pacman-home img {
+    height: 70px;
+    width: auto;
+    padding: 0 5px;
+}
+
+#home .pacman-home img:nth-child(1) {
+    margin-right: 5vw;
+    transform: scaleX(-1);
+}
+
+#home .insert-coin {
+    margin-top: 5vh;
+    animation: coinFlash 1s step-start infinite ;
+}
+
+@keyframes coinFlash {
+    50% {opacity: 0;}
+}
+
+/* Main-SCORE */
+#high-scores {
+    padding: 15vh 0;
+}
+
+#high-scores h1 {
+    font-size: 2.3em;
+    color: var(--lightYellow);
+    margin-bottom: 7vh;
+}
+
+#high-scores .grid-scores {
+    display: grid;
+    width: 80vw;
+    margin: auto;
+    margin-top: 5vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr repeat(10,1fr);
+    gap: 10px;
+    font-size: 1.5em;
+}
+
+#high-scores .grid-scores .orange {
+    color: var(--orange);
+}
+
+#high-scores .grid-scores .red {
+    color: var(--red);
+}
+
+#high-scores .grid-scores .blue {
+    color: var(--blue);
+}
+
+#high-scores .grid-scores .pink {
+    color: var(--pink);
+}
+
+/* Main-HOW TO PLAY */
+#how-to-play {
+    padding: 15vh 0;
+}
+
+#how-to-play .pacman-how {
+    margin-bottom: 8vh;
+    animation: pacmanEat 5s infinite linear;
+}
+
+@keyframes pacmanEat {
+    0% {
+        transform: translate(-70vw, 0);
+    }    
+
+    100% {
+        transform: translate(70vw, 0);
+    }
+}
+
+#how-to-play .pacman-how img {
+    height: 70px;
+    width: auto;
+    padding: 0 5px;
+}
+
+#how-to-play .pacman-how img:nth-child(1) {
+    margin-right: 5vw;
+}
+
+#how-to-play .how-to-play-para {
+    width: 80vw;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+#how-to-play .how-to-play-para h2 {
+    line-height: 1;
+}
+
+#how-to-play .how-to-play-para h2 span {
+    color: var(--yellow);
+}
+
+/* Main - PLAYERS */
+#players {
+    padding: 15vh 0;
+}
+
+#players .players-table {
+    margin: auto;
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 10vh;
+}
+
+#players .player-table tr,th,td {
+    padding: 1.5vh;
+}
+
+#players .players-table img {
+    width: 70px;
+    height: auto;
+    transform: scaleX(-1);
+}
+
+#players .players-table tr:nth-child(2) {
+    color: var(--red);
+}
+
+#players .players-table tr:nth-child(3) {
+    color: var(--pink);
+}
+
+#players .players-table tr:nth-child(4) {
+    color: var(--blue);
+}
+
+#players .players-table tr:nth-child(5) {
+    color: var(--orange);
+}
+
+#players .pts h2 {
+    display: inline-block;
+}
+
+#players .pts .pts-200 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin-bottom: 10vh;
+}
+
+#players .pts .pts-200 img {
+    width: 70px;
+    height: auto;
+}
+
+#players .pts .pts-200 h2 {
+    margin: 0;
+    padding-right: 3vw;
+    padding-top: 1vh;
+}
+
+#players .pts .pts-50 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    margin-bottom: 10vh;
+}
+
+#players .pts .pts-50 h2 {
+    margin: 0;
+    padding-right: 3vw;
+}
+
+#players .pts .pts-50 .pts-box1 {
+    height: 1.5em;
+    width: 1.5em;
+    display: inline-block;
+    background-color: var(--lightYellow);
+
+}
+
+#players .pts .pts-10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+}
+
+#players .pts .pts-10 h2 {
+    margin: 0;
+    padding-right: 3vw;
+}
+
+#players .pts .pts-10 .pts-box2 {
+    height: .7em;
+    width: .7em;
+    display: inline-block;
+    background-color: var(--lightYellow);
+
+}
+
+
+
+/* Footer */

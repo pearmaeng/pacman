@@ -28,7 +28,7 @@ body {
 }
 
 hr {
-    border: 2px solid var(--lightYellow);
+    border: 1px dotted var(--lightYellow);
     width: 100%;
 }
 
